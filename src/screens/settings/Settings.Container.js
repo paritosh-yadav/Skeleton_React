@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { initiateSettings } from "./Settings.Actions";
+import { fetchSettings } from "./Settings.Actions";
 import SettingsComponent from "./Settings.Component";
 
 const mapStateToProps = state => {
@@ -8,5 +8,5 @@ const mapStateToProps = state => {
 // export default SettingsContainer;
 export default connect(
     mapStateToProps,
-    { initiateSettings }
+    { fetchSettings }
 )(SettingsComponent);
