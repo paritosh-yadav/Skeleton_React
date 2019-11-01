@@ -1,4 +1,4 @@
-// src/components/PrivateRoute.js
+// src/screens/PrivateRoute.js
 
 import React, { useEffect } from "react";
 import { Route } from "react-router-dom";

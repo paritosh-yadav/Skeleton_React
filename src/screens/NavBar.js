@@ -1,22 +1,29 @@
-// src/components/NavBar.js
+// src/screens/NavBar.js
 
 import React from "react";
 import { Link } from "react-router-dom";
 import { useAuth0 } from "../auth0/react-auth0-spa";
 
 const NavBar = () => {
-    const { isAuthenticated, loginWithRedirect, logout } = useAuth0();
-
+    const { isAuthenticated, loginWithRedirect, logout, loading } = useAuth0();
+    if (loading) {
+        return (
+            <div>Loading...</div>
+        );
+    }
     return (
         <div>
             {!isAuthenticated && (
-                <button
-                    onClick={() =>
-                        loginWithRedirect({})
-                    }
-                >
-                    Log in
-        </button>
+                <div>
+                    <button
+                        onClick={() =>
+                            loginWithRedirect({})
+                        }
+                    >
+                        Log in
+        </button>&nbsp;
+        <Link to="/settings">Settings</Link>
+                </div>
             )}
             {/* NEW - add a link to the home and profile pages */}
             {isAuthenticated && (

@@ -1,4 +1,4 @@
-// src/components/Profile.js
+// src/screens/Profile.js
 
 import React, { Fragment } from "react";
 import { useAuth0 } from "../auth0/react-auth0-spa";
