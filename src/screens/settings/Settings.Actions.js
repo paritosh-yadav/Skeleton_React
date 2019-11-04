@@ -35,11 +35,11 @@ export const fetchSettings = (endpoint) => {
                     console.log(error.request);
                 } else {
                     // Something happened in setting up the request that triggered an Error
-                    console.log('Error', error.message);
+                    console.log("Error", error.message);
                 }
                 console.log(error.config);
-                return dispatch(settingsFailed(error.response.data))
+                return dispatch(settingsFailed(error.response.data));
             },
         );
     };
-}
+};
