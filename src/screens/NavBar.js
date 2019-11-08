@@ -2,6 +2,7 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
+import { FormattedMessage } from 'react-intl';
 import { useAuth0 } from "../auth0/react-auth0-spa";
 
 const NavBar = () => {
@@ -22,7 +23,8 @@ const NavBar = () => {
                     >
                         Log in
         </button>&nbsp;
-        <Link to="/settings">Settings</Link>
+        <p><FormattedMessage id="Home.dayMessage" defaultMessage="It's a beautiful day outside." /></p>
+                    <Link to="/settings">Settings</Link>
                 </div>
             )}
             {/* NEW - add a link to the home and profile pages */}
